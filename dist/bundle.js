@@ -1,0 +1,1 @@
+!function(){"use strict";console.log("hello"),console.log(12),console.log("fengjielin"),console.log({name:"孙悟空"})}();
