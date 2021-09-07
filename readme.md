@@ -20,4 +20,8 @@ npm i -D webpack-dev-server
 npm i -D clean-webpack-plugin
 # 安装babel 实现兼容
 npm i -D @babel/core @babel/preset-env babel-loader core-js
+# 处理css文件
+npm i -D less less-loader css-loader style-loader
+# 处理css兼容问题
+npm i -D postcss postcss-loader postcss-preset-env
 ```

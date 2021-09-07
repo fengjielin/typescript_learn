@@ -15,7 +15,8 @@ module.exports = {
     filename: "bundle.js",
     environment:{
       // 告诉webpack不适用箭头函数
-      arrowFunction:false
+      arrowFunction:false,
+      const:false
     }
   },
   // 指定webpack打包时要使用的模块
@@ -51,6 +52,29 @@ module.exports = {
           },
           'ts-loader'],
         exclude: /node-modules/
+      },
+      {
+        test: /\.less$/,
+        use: [
+          "style-loader",
+          "css-loader",
+          {
+            loader:"postcss-loader",
+            options: {
+              postcssOptions:{
+                plugins:[
+                  [
+                    "postcss-preset-env",
+                    {
+                      browsers:"last 2 versions"
+                    }
+                  ]
+                ]
+              }
+            }
+          },
+          "less-loader"
+        ]
       }
     ]
   },

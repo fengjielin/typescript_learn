@@ -1,3 +1,4 @@
+import './style/index.less'
 import {str1} from './m1'
 console.log('hello');
 let a: number = 12
