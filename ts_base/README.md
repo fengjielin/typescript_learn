@@ -434,6 +434,16 @@ let obj = JSON.parse(strJson as string)
 
 ### 数据类实现
 
+业务需求
 
+- 业务：评论操作
+  - 加载评论列表 - 从本地 读取数据 显示
+  - 新增评论 - 存入 本地 和 页面
+  - 删除评论 - 从本地 和 页面 删除
 
-
+- DataHelpler 类设计
+  - dataKey - localStrogae的键
+  - primaryKey - 数据项主键名称
+  - 加载评论列表时 - readDate()
+  - 新增评论 - addData() 和 saveData()
+  - 删除评论 - removeDataById()
