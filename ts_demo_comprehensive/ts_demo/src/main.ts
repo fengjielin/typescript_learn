@@ -1,10 +1,17 @@
 import Vue from 'vue'
 import App from './App.vue'
-import axios from './axios/index'
+import axiosRequest from './axios/request'
 
 Vue.config.productionTip = false
 
-console.log(axios(1)); 
+const axios = new axiosRequest({
+  baseURL: 'http://jsonplaceholder.typicode.com',
+  timeout: 5000
+});
+
+axios.get({ url: '/posts' }).then(res => {
+  console.log(res);
+})
 
 new Vue({
   render: h => h(App),
