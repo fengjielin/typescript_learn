@@ -4,11 +4,11 @@ import VueRouter, { RouteConfig } from 'vue-router'
 Vue.use(VueRouter)
 
 const routes: Array<RouteConfig> = [
-  // {
-  //   path:'/',
-  //   name:'Home',
-  //   component: () => import('../components/HelloWorld.vue')
-  // }
+  {
+    path:'/',
+    name:'Login',
+    component: () => import('../views/Login.vue')
+  }
 ]
 
 const router = new VueRouter({
